@@ -1,4 +1,4 @@
-## Unreleased
+## 2.1
 
 - 优化:Dockerfile 拆分依赖层,前端先 `COPY package.json/pnpm-lock.yaml` 再 `pnpm i`,Java 先 `COPY pom.xml` 并 `dependency:go-offline` 预热依赖,源码变更不再触发依赖重装,显著缩短增量构建耗时
 - 优化:新增 `playedu-api/.mvn/settings.xml` 与 `.mvn/maven.config`,默认走阿里云 Maven 镜像并启用 `-T 1C` 并行构建,加速 `mvnw` 依赖下载与编译
